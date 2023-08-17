@@ -4,7 +4,6 @@ RSpec.describe Like, type: :model do
   let(:user) { User.create(name: 'Tom') }
   let(:post) { Post.create(title: 'My First Post', text: 'This is the content of the post.', author: user) }
 
-
   it 'is valid with an author and post' do
     like = Like.new(author: user, post:)
     expect(like).to be_valid
