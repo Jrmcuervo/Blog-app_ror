@@ -14,7 +14,7 @@ RSpec.describe Post, type: :model do
   end
 
   it 'is not valid with a title longer than 250 characters' do
-    long_title = "a" * 251
+    long_title = 'a' * 251
     post = Post.new(title: long_title, author: user)
     expect(post).to_not be_valid
   end
@@ -38,5 +38,4 @@ RSpec.describe Post, type: :model do
     post = Post.new(title: 'Test', author: user, likes_counter: -1)
     expect(post).to_not be_valid
   end
-
 end

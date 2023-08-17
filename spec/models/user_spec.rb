@@ -10,7 +10,7 @@ RSpec.describe User, type: :model do
     user = User.new(name: nil)
     expect(user).to_not be_valid
   end
-  
+
   it 'is valid with posts_counter as an integer greater than or equal to zero' do
     user = User.new(name: 'Tom', posts_counter: 0)
     expect(user).to be_valid
@@ -25,5 +25,4 @@ RSpec.describe User, type: :model do
     user = User.new(name: 'Tom', posts_counter: 'string')
     expect(user).to_not be_valid
   end
-
 end
