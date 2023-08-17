@@ -20,7 +20,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_16_205303) do
     t.text "text", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id"], name: "index_comments_on_author_id"
     t.index ["post_id"], name: "index_comments_on_post_id"
   end
 
@@ -29,7 +28,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_16_205303) do
     t.bigint "post_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id"], name: "index_likes_on_author_id"
     t.index ["post_id"], name: "index_likes_on_post_id"
   end
 
@@ -41,7 +39,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_16_205303) do
     t.integer "likes_counter", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id"], name: "index_posts_on_author_id"
   end
 
   create_table "users", force: :cascade do |t|
