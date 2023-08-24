@@ -1,94 +1,98 @@
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-    font-size: 30px;
-    line-height: 2rem;
-    text-align: center;
-    margin: 30px auto;
-    font-weight: bolder;
-    text-decoration: underline;
+  font-size: 30px;
+  line-height: 2rem;
+  text-align: center;
+  margin: 30px auto;
+  font-weight: bolder;
+  text-decoration: underline;
 }
 
 h6 {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 ul {
-    padding: 0;
-    list-style-type: none;
+  padding: 0;
+  list-style-type: none;
 }
 
 .button,
 button {
-    box-shadow: 5px 5px black;
-    margin: 10px 0;
+  box-shadow: 5px 5px black;
+  margin: 10px 0;
 }
 
 .button a {
-    padding: 5px 10px;
-    border: 1px solid black;
-    text-decoration: none;
-    color: black;
+  padding: 5px 10px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: black;
 }
 
 .button a:visited {
-    color: black;
+  color: black;
 }
 
 button {
-    width: 150px;
-    background-color: transparent;
-    cursor: pointer;
-    border: 2px solid black;
-    padding: 5px 0;
+  width: 150px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid black;
+  padding: 5px 0;
 }
 
 .wrapper {
-    width: 90%;
-    margin: auto;
-    padding-top: 50px;
+  width: 90%;
+  margin: auto;
+  padding-top: 50px;
 }
 
 .userNameWrapper {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-.userNameWrapper>div,
+.userNameWrapper > div,
 .bio,
 .post,
 .comments {
-    border: 5px solid black;
-    margin: 5px 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.userNameWrapper>div h2,
-.userNameWrapper>div h6,
-.bio>*,
-.post>* {
-    margin: 0 10px;
-    margin-bottom: 15px;
-}
-
-.postHeader {
-    display: flex;
-    justify-content: space-between;
+  border: 5px solid black;
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .userNameAnchor,
 .userNameWrapper .userName {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70px;
 }
 
-.count,
-.userNameAnchor>h6 {
-    align-self: flex-end;
+.userNameAnchor > h6,
+.count {
+  align-self: flex-end;
+}
+
+.userNameWrapper > div h2,
+.userNameWrapper > div h6 {
+  margin: 0 10px;
+  margin-bottom: 15px;
+}
+
+.bio > *,
+.post > * {
+  margin: 0 10px;
+  margin-bottom: 15px;
+}
+
+.postHeader {
+  display: flex;
+  justify-content: space-between;
 }
