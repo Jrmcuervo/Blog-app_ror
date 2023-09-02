@@ -14,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '651f6c683529cf3c6b401d6eacce4f55d4e2a677c1eafc2c657e7a74219a15f3b554928a63f599edaf3ad7786ea2b3ec6636c67579a4b62c64833c6f7209cfdc'
+  # config.secret_key = '22b771643c946ec31acb0897b4b450f131bc5ba496ef3475cc96528efebf975051cfb925af63c5a7d8d76af06d1e45a447a0847a23c0aa89ee0ff33b2a7d3b9a'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -126,7 +126,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '2cc7b5e8bf8d2d7793e64222bc21f75f8815ca88dea28a2b78aa28337520cc2cd79fe9e28e16003274878c3f731b7f68e138d58c5b180f03cce6ebaec44a50db'
+  # config.pepper = '397601297c260beb9dbbbcfc7935001587cc745abefd11d96c25b255d74bfb59024a3fc360434f3e2cec70b650664f4185717cf8698381c6d91e0546a7cf12c0'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -151,7 +151,7 @@ Devise.setup do |config|
   # their account can't be confirmed with the token any more.
   # Default is nil, meaning there is no restriction on how long a user can take
   # before confirming their account.
-  # config.confirm_within = 3.days
+  config.confirm_within = 3.days
 
   # If true, requires any email changes to be confirmed (exactly the same way as
   # initial account confirmation) to be applied. Requires additional unconfirmed_email
@@ -244,7 +244,7 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-  # config.scoped_views = false
+  config.scoped_views = true
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
@@ -263,7 +263,7 @@ Devise.setup do |config|
   # should add them to the navigational formats lists.
   #
   # The "*/*" below is required to match Internet Explorer requests.
-  # config.navigational_formats = ['*/*', :html, :turbo_stream]
+  config.navigational_formats = ['*/*', :html, :turbo_stream]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
