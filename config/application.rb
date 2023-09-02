@@ -6,10 +6,12 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module BlogAppRor
+module Blog
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+
+    config.secret_key_base = Rails.env.production? ? ENV['SECRET_KEY_BASE'] : SecureRandom.hex(64)
 
     # Configuration for the application, engines, and railties goes here.
     #

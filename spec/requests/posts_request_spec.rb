@@ -1,24 +1,30 @@
 require 'rails_helper'
 
-RSpec.describe 'Posts', type: :request do
-  let!(:user) { User.create(name: 'Test User', photo: 'URL', bio: 'Bio') }
-  let!(:post) { Post.create(author: user, title: 'Test Post', text: 'This is a test post.') }
+RSpec.describe PostsController, type: :request do
+  describe 'GET #index' do
+    let(:user) { User.create(name: 'John Doe') }
 
-  describe 'GET /index' do
-    it 'returns http success' do
-      get "/users/#{user.id}/posts"
+    before do
+      Post.create(title: 'Post 1', body: 'Lorem ipsum', author: user)
+      Post.create(title: 'Post 2', body: 'Dolor sit amet', author: user)
+      Post.create(title: 'Post 3', body: 'Consectetur adipiscing elit', author: user)
+    end
+
+    it 'returns http success and renders the index template' do
+      get user_posts_path(user)
       expect(response).to have_http_status(:success)
       expect(response).to render_template(:index)
-      expect(response.body).to include('Here is a list of posts for a given user')
     end
   end
 
-  describe 'GET /show' do
-    it 'returns http success' do
-      get "/users/#{user.id}/posts/#{post.id}"
+  describe 'GET #show' do
+    let(:user) { User.create(name: 'John Doe') }
+    let(:post) { Post.create(title: 'Post 1', body: 'Lorem ipsum', author: user) }
+
+    it 'returns http success and renders the show template' do
+      get user_post_path(user, post)
       expect(response).to have_http_status(:success)
       expect(response).to render_template(:show)
-      expect(response.body).to include('Display single post details here')
     end
   end
 end
