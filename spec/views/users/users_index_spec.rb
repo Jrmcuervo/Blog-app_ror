@@ -23,4 +23,16 @@ RSpec.feature 'User index page', type: :feature do
       end
     end
   end
+
+  scenario 'redirects to user show page when clicking on a user link' do
+    user1 = User.create(name: 'Vilis', posts_counter: 23)
+
+    visit users_path
+
+    within '.wrapper' do
+      click_link(user1.name, href: user_path(user1), class: 'userNameAnchor')
+    end
+
+    expect(current_path).to eq(user_path(user1))
+  end
 end

@@ -25,7 +25,7 @@ h1 {
   width: 100%;
 }
 
-.userNameWrapper > div {
+.userNameWrapper>div {
   border: 5px solid black;
   margin: 5px 0;
 }
@@ -51,8 +51,8 @@ h1 {
   flex-direction: column;
 }
 
-.bio > *,
-.post > * {
+.bio>*,
+.post>* {
   margin: 0 10px;
   margin-bottom: 15px;
 }
@@ -112,11 +112,11 @@ h6 {
   margin: 0 10px;
 }
 
-.userNameAnchor > h6 {
+.userNameAnchor>h6 {
   align-self: flex-end;
 }
 
-.userNameWrapper > div h2,
-.userNameWrapper > div h6 {
+.userNameWrapper>div h2,
+.userNameWrapper>div h6 {
   margin: 0 10px;
 }
